@@ -6,45 +6,15 @@ show_help() {
     echo ""
     echo "Options:"
     echo "  -h, --help    Show this help"
-    echo "  --hyprland    Install Hyprland only"
 }
 
 pause(){
    read -p "Press [Enter] to continue..."
 }
 
-ask_hyprland() {
-    while true; do
-        read -p "Do you want to install Hyprland? (y/n): " choice
-        case "$choice" in 
-            [Yy]* ) 
-                return 0 # 0 means "True/Yes" in Bash
-                ;;
-            [Nn]* ) 
-                return 1 # 1 means "False/No"
-                ;;
-            * ) 
-                echo "Please answer with 'y' (yes) or 'n' (no).";;
-        esac
-    done
-}
-
-install_hyprland_logic() {
-    echo "Launching Hyprland installation..."
-    # Cloning into user home directory without sudo
-    git clone -b 25.10 --depth=1 https://github.com/JaKooLit/Ubuntu-Hyprland.git ~/Ubuntu-Hyprland-25.10
-    cd ~/Ubuntu-Hyprland-25.10
-    chmod +x install.sh
-    ./install.sh
-}
-
 # Check for flags
 if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     show_help
-    exit 0
-fi
-if [[ "$1" == "--hyprland" ]]; then
-    install_hyprland_logic
     exit 0
 fi
 
@@ -161,11 +131,3 @@ cat <<EOF > ~/.emacs
 EOF
 
 echo "Emacs configuration complete."
-
-# Installing Hyprland
-if ask_hyprland; then
-    install_hyprland_logic
-else
-    echo "Hyprland installation cancelled. Script finished."
-fi
-```
