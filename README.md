@@ -9,23 +9,24 @@ This repository contains a comprehensive shell script (`INSTALL.sh`) designed to
 The script handles the installation and configuration of several key software categories:
 
 #### 1. Productivity & Communication
-* **VS Code**: The industry-standard code editor.
-* **Google Chrome**: High-performance web browsing.
-* **Discord**: For community and peer communication.
-* **Teams for Linux**: Specifically for academic or corporate collaboration.
+* **VS Code**: Code editor.
+* **Google Chrome**: Web browser.
+* **Discord**: For communication.
+* **Teams for Linux**: For school communication.
 
 #### 2. Epitech Official Tools ("DUMP")
 The script adds the official Epitech PPA and sets up the following:
 * **Clang-20**: The latest LLVM toolchain for C/C++ development.
 * **Epitech C-Pool Tools**: Specific packages required for the C Pool.
 * **Custom Editors**: Pre-configured versions of `epitech-emacs` and `epitech-vim`.
+* **Emacs Config**: Automatically writes a custom `.emacs` with mouse support, line numbering, and Epitech initialization.
 
 #### 3. Development Essentials
 * **Git**: For version control.
 * **Docker**: For containerized development environments.
 
 #### 4. Custom Desktop Environment
-* **Hyprland**: Clones and executes a custom Hyprland installation script for a modern, tiled Wayland compositor experience.
+* **Hyprland**: Installs a great graphical interface.
 
 ---
 
@@ -38,21 +39,34 @@ The script adds the official Epitech PPA and sets up the following:
 
 ### 🛠️ How to use
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/FirePlac-e/Dump.git
-    cd Dump
-    ```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/FirePlac-e/Dump.git
+   cd Dump
+   ```
 
-2.  **Make the script executable:**
-    ```bash
-    chmod +x INSTALL.sh
-    ```
+2. **Make the script executable:**
+   ```bash
+   chmod +x INSTALL.sh
+   ```
 
-3.  **Run with sudo:**
-    ```bash
-    sudo ./INSTALL.sh
-    ```
+3. **Run with the desired options:**
+
+| Flag | Description |
+| :--- | :--- |
+| `(No Flag)` | Runs the full installation (Editors, Tools, Git, and interactive Hyprland prompt). |
+| `--hyprland`, `-hy` | Skips all Epitech tools and only installs the Hyprland environment. |
+| `--help`, `-h` | Displays the usage help menu. |
+
+**Example (Full Install):**
+```bash
+sudo ./INSTALL.sh
+```
+
+**Example (Only Hyprland):**
+```bash
+sudo ./INSTALL.sh --hyprland
+```
 
 ---
 
