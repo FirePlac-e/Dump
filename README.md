@@ -1,6 +1,6 @@
-## Epitech & Hyprland Environment Setup Script
+## Epitech Environment Setup Script
 
-This repository contains a comprehensive shell script (`INSTALL.sh`) designed to automate the installation of a development environment, specifically tailored for **Epitech** students or developers looking for a ready-to-go Linux workstation.
+This repository contains a shell script (`INSTALL.sh`) designed to automate the installation of a development environment specifically tailored for **Epitech** students. It streamlines the setup of system tools, official school packages, and personal configurations.
 
 ---
 
@@ -12,28 +12,30 @@ The script handles the installation and configuration of several key software ca
 * **VS Code**: Professional code editor installed via Snap.
 * **Google Chrome**: Web browser installed via official `.deb` package.
 * **Discord**: Communication platform installed via Snap.
-* **Teams for Linux**: For school-related communication.
+* **Teams for Linux**: For school-related communication via Snap.
 
 #### 2. Epitech Official Tools ("DUMP")
 The script integrates the official Epitech PPA and sets up the following:
 * **Clang-20**: The latest LLVM toolchain configured via `update-alternatives`.
 * **Epitech C-Pool Tools**: Specific packages required for the C Pool curriculum.
 * **Custom Editors**: Pre-configured versions of `epitech-emacs` and `epitech-vim`.
-* **Emacs Config**: Automatically writes a custom `.emacs` file to your home directory with mouse support, line numbering, and Epitech initialization.
+* **Emacs Config**: Automatically writes a custom `.emacs` file to your home directory featuring:
+    * Epitech initialization.
+    * Line and column numbering.
+    * Improved mouse support (scrolling and clicking).
+    * Windows-style copy/paste behavior (`CUA mode`).
+    * Automatic parenthesis/bracket pairing.
 
 #### 3. Development & Version Control
-* **Git & SSH**: Interactive setup for your Epitech Git identity and automatic Ed25519 SSH key generation.
+* **Git & SSH**: Interactive setup for your Epitech Git identity and automatic **Ed25519** SSH key generation.
 * **Docker**: Installed via `docker.io` for containerized development.
-
-#### 4. Custom Desktop Environment
-* **Hyprland**: An interactive prompt allows you to install the Hyprland tiling window manager (via the JaKooLit Ubuntu-Hyprland v25.10 installer).
 
 ---
 
 ### ⚠️ Prerequisites
 
-* **Operating System**: Designed for **Ubuntu 24.04 (Noble)** or compatible Debian-based systems.
-* **Privileges**: **Do NOT run this script with `sudo`**. The script is designed to run as a standard user to ensure your home directory files (SSH keys, Emacs config, Hyprland) are owned by you. It will prompt for your password internally when administrative tasks are performed.
+* **Operating System**: Optimized for **Ubuntu 24.04 (Noble)** or compatible Debian-based systems.
+* **Privileges**: **Do NOT run this script with `sudo`**. The script should be run as a standard user. It will request `sudo` permissions internally when installing system packages to ensure that configuration files in your home directory (like `.emacs` and SSH keys) are owned by your user, not root.
 
 ---
 
@@ -50,29 +52,20 @@ The script integrates the official Epitech PPA and sets up the following:
    chmod +x INSTALL.sh
    ```
 
-3. **Run as a standard user:**
+3. **Run the installer:**
+   ```bash
+   ./INSTALL.sh
+   ```
 
 | Flag | Description |
 | :--- | :--- |
-| `(No Flag)` | Runs the full installation (Tools, Git config, and interactive Hyprland prompt). |
-| `--hyprland` | Skips all Epitech tools and only installs the Hyprland environment. |
 | `--help`, `-h` | Displays the usage help menu. |
-
-**Example (Full Install):**
-```bash
-./INSTALL.sh
-```
-
-**Example (Only Hyprland):**
-```bash
-./INSTALL.sh --hyprland
-```
 
 ---
 
 ### 📝 Important Notes
 > [!IMPORTANT]
-> **SSH Key:** After the Git configuration section, the script will display your new Public Key. You should copy this and add it to your [GitHub settings](https://github.com/settings/keys) or Epitech Intranet.
+> **SSH Key:** During the Git configuration, the script will print your **Public Key** to the terminal. Copy this key and add it to your [GitHub settings](https://github.com/settings/keys) and the Epitech Intranet to enable repository access.
 >
 > [!WARNING]
-> This script uses `noninteractive` mode for package installation. It will automatically purge `postfix` after the Epitech tool installation to prevent mail server conflicts.
+> The script uses `noninteractive` mode for mail server configuration during the Epitech tool installation. It automatically purges `postfix` at the end to keep your system clean and prevent local mail server conflicts.
