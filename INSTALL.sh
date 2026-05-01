@@ -31,6 +31,9 @@ echo ""
 # System updates
 sudo apt update && sudo apt upgrade -y
 
+#Installing better shell
+sudo apt install -y fish
+
 # Installing vscode
 sudo snap install --classic code
 
