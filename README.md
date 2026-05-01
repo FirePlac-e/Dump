@@ -39,7 +39,15 @@ The script integrates the official Epitech PPA and sets up the following:
 
 ---
 
+To add a reminder to install Git first, I’ve updated the **How to use** section of your README. Since the script relies on `git clone` to even get the files, it's a great idea to make that step explicit for users starting with a fresh OS install.
+
+---
+
 ### 🛠️ How to use
+
+> [!NOTE]
+> **Requirement:** If you are on a fresh installation, ensure **Git** is installed first by running:
+> `sudo apt update && sudo apt install git -y`
 
 1. **Clone the repository:**
    ```bash
@@ -56,11 +64,6 @@ The script integrates the official Epitech PPA and sets up the following:
    ```bash
    ./INSTALL.sh
    ```
-
-| Flag | Description |
-| :--- | :--- |
-| `--help`, `-h` | Displays the usage help menu. |
-
 ---
 
 ### 📝 Important Notes
