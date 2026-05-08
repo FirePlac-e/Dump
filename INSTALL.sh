@@ -50,10 +50,8 @@ echo "INSTALLING TOOLS AND PACKAGES FOR EPITECH'S DUMP"
 sudo add-apt-repository -y -s ppa:epitech/ppa
 sudo add-apt-repository -y -s universe
 sudo apt update
-
 echo "postfix postfix/mailname string epitech.eu" | sudo debconf-set-selections
 echo "postfix postfix/main_mailer_type string 'Internet Site'" | sudo debconf-set-selections
-
 export DEBIAN_FRONTEND=noninteractive
 sudo apt install -y wget
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/llvm.asc
@@ -68,6 +66,10 @@ sudo apt purge -y postfix
 sudo snap install teams-for-linux
 sudo apt install -y docker.io
 sudo apt update
+
+#Install userful features
+sudo apt install -y tcsh
+sudo apt install valgrind -y
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
