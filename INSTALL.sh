@@ -70,6 +70,7 @@ sudo apt update
 #Install userful features
 sudo apt install -y tcsh
 sudo apt install valgrind -y
+sudo apt install libcsfml-dev
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
