@@ -71,6 +71,10 @@ sudo apt update
 sudo apt install -y tcsh
 sudo apt install valgrind -y
 sudo apt install libcsfml-dev
+sudo apt install banana-coding-style-checker
+sudo apt install npm
+sudo apt install curl
+sudo apt install python3.12-venv
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
