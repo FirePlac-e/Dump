@@ -49,6 +49,7 @@ sudo snap install discord
 echo "INSTALLING TOOLS AND PACKAGES FOR EPITECH'S DUMP"
 
 #Install userful features
+sudo apt install -y micro
 sudo apt install -y tcsh
 sudo apt install valgrind -y
 sudo apt install libcsfml-dev
