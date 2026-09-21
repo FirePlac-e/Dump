@@ -47,6 +47,10 @@ sudo snap install discord
 
 # Installing EPITECH_DUMP
 echo "INSTALLING TOOLS AND PACKAGES FOR EPITECH'S DUMP"
+wget -q -O- https://raw.githubusercontent.com/Epitech/dump/refs/heads/master/dump.sh | sudo bash
+sudo update-alternatives --set clang /usr/bin/clang-21
+sudo update-alternatives --set clang++ /usr/bin/clang++-21
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 #Install userful features
 sudo apt install -y micro
