@@ -2,7 +2,7 @@
 
 show_help() {
     echo "Usage: ./INSTALL.sh [OPTION]"
-    echo "Installer for the Epitech environment"
+    echo "Installer for the Epitech environment on Ubuntu 26.04 LTS"
     echo ""
     echo "Options:"
     echo "  -h, --help    Show this help"
@@ -27,7 +27,16 @@ echo "░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█�
 echo "░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░"
 echo "░▒▓███████▓▒░ ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░"
 echo ""
-
+echo "░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓████████▓▒░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░"
+echo "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░"
+echo "░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░"
+echo "░▒▓██████▓▒░ ░▒▓███████▓▒░░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓██████▓▒░░▒▓█▓▒░      ░▒▓████████▓▒░"
+echo "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░     ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░"
+echo "░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░"
+echo "░▒▓████████▓▒░▒▓█▓▒░      ░▒▓█▓▒░  ░▒▓█▓▒░   ░▒▓████████▓▒░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░"
+echo ""
+                                                                                     
+                                                                                     
 # System updates
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl
@@ -60,9 +69,10 @@ mkdir TEK1
 #Install userful features
 sudo apt install -y micro
 sudo apt install -y tcsh
-sudo apt install valgrind -y
-sudo apt install libcsfml-dev
-sudo apt install npm
+sudo apt install -y valgrind
+sudo apt install -y libcsfml-dev
+sudo apt install -y npm
+sudo apt install -y sl
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
