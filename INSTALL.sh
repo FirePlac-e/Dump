@@ -30,11 +30,13 @@ echo ""
 
 # System updates
 sudo apt update && sudo apt upgrade -y
+sudo apt install curl
 
-#Installing better shell
+#Installing looks utils
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 chsh -s $(which zsh)
+sudo apt install gnome-shell-extension-manager
 
 # Installing vscode
 sudo snap install --classic code
@@ -61,7 +63,6 @@ sudo apt install -y tcsh
 sudo apt install valgrind -y
 sudo apt install libcsfml-dev
 sudo apt install npm
-sudo apt install curl
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
