@@ -32,7 +32,9 @@ echo ""
 sudo apt update && sudo apt upgrade -y
 
 #Installing better shell
-sudo apt install -y fish
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh)
 
 # Installing vscode
 sudo snap install --classic code
@@ -51,16 +53,15 @@ wget -q -O- https://raw.githubusercontent.com/Epitech/dump/refs/heads/master/dum
 sudo update-alternatives --set clang /usr/bin/clang-21
 sudo update-alternatives --set clang++ /usr/bin/clang++-21
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+mkdir TEK1
 
 #Install userful features
 sudo apt install -y micro
 sudo apt install -y tcsh
 sudo apt install valgrind -y
 sudo apt install libcsfml-dev
-sudo apt install banana-coding-style-checker
 sudo apt install npm
 sudo apt install curl
-sudo apt install python3.12-venv
 
 # GitHub Configuration (Standard User)
 read -p "Enter your Epitech email (ex: firstname.lastname@epitech.eu): " user_email
